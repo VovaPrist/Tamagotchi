@@ -6,22 +6,22 @@ public class Tamagotchi
 {
     private int hunger;
     private int boredom;
-    private List<String> words;
+    private List<String> words = new List<string>();
     private bool isAlive;
     public string Name;
 
     public void Feed()
     {
         hunger += 5;
-        if (hunger >= 10) hunger = 10;
+        if (hunger >= 11) hunger = 11;
     }
 
     public void Hi()
     {
         print("Welcome to Tamagotchi");
-        print("Name your Tamagotchi: ");
         while (true)
         {
+            print("Name your Tamagotchi: ");
             string temp = Console.ReadLine();
 
             if (temp.Length < 2)
@@ -32,22 +32,25 @@ public class Tamagotchi
             else
             {
                 print($"Confirm that your Tamagotchi name will be {temp}");
-                print("Y/N");
                 while (true)
                 {
-                    string confirm = Console.ReadLine();
-                    if (confirm == "Y")
+                    print("Y/N");
+                    string confirm = Console.ReadLine().ToLower();
+                    if (confirm == "y")
                     {
                         Name = temp;
                         break;
                     }
-                    else if (confirm == "N") break;
+                    else if (confirm == "n") break;
                     else continue;
                 }
-                if (Name.Length > 2) break;
+                if (Name != null) break;
+                else continue;
             }
         }
         print($"Everyone, welcome our new Tamagotchi - {Name}");
+        boredom = 0;
+        hunger = 10;
         Console.ReadLine();
     }
 
@@ -78,11 +81,13 @@ public class Tamagotchi
 
     public void PrintStats()
     {
+        isAlive = GetAlive();
+        print("Stats: ");
         print($"Name: {Name}");
         print($"Alive: {isAlive}");
         print($"Hunger: {hunger}");
         print($"Boredom: {boredom}");
-        print($"Words: {words}");
+        print($"Words: {string.Join(", ", words)}");
     }
 
     public bool GetAlive()
@@ -110,7 +115,7 @@ public class Tamagotchi
     private void ReduceBoredom(int points)
     {
         boredom -= points;
-        if (boredom <= 0) boredom = 0;
+        if (boredom <= -1) boredom = -1;
     }
 
     public void Choice()
@@ -164,23 +169,23 @@ public class Tamagotchi
                 while (true)
                 {
                     string word = Console.ReadLine();
-                    bool didTeach = false;
+                    bool didTeach;
 
-                    if (word.Length >= 1)
+                    if (word != null && word.Length >= 1)
                     {
                         print($"Are you sure you want to teach {Name} word {word}");
-                        print("Y/N");
                         while(true)
                         {
-                            string temp = Console.ReadLine();
+                            print("Y/N");
+                            string temp = Console.ReadLine().ToLower();
 
-                            if (temp == "Y")
+                            if (temp == "y")
                             {
                                 Teach(word);
                                 didTeach = true;
                                 break;
                             }
-                            else if (temp == "N")
+                            else if (temp == "n")
                             {
                                 didTeach = false;
                                 break;

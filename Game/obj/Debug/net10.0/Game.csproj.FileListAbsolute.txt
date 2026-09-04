@@ -1,0 +1,15 @@
+/Users/vova/Documents/Skolan/C#/Tamagotchi/Game/bin/Debug/net10.0/Game
+/Users/vova/Documents/Skolan/C#/Tamagotchi/Game/bin/Debug/net10.0/Game.deps.json
+/Users/vova/Documents/Skolan/C#/Tamagotchi/Game/bin/Debug/net10.0/Game.runtimeconfig.json
+/Users/vova/Documents/Skolan/C#/Tamagotchi/Game/bin/Debug/net10.0/Game.dll
+/Users/vova/Documents/Skolan/C#/Tamagotchi/Game/bin/Debug/net10.0/Game.pdb
+/Users/vova/Documents/Skolan/C#/Tamagotchi/Game/obj/Debug/net10.0/Game.GeneratedMSBuildEditorConfig.editorconfig
+/Users/vova/Documents/Skolan/C#/Tamagotchi/Game/obj/Debug/net10.0/Game.AssemblyInfoInputs.cache
+/Users/vova/Documents/Skolan/C#/Tamagotchi/Game/obj/Debug/net10.0/Game.AssemblyInfo.cs
+/Users/vova/Documents/Skolan/C#/Tamagotchi/Game/obj/Debug/net10.0/Game.csproj.CoreCompileInputs.cache
+/Users/vova/Documents/Skolan/C#/Tamagotchi/Game/obj/Debug/net10.0/Game.sourcelink.json
+/Users/vova/Documents/Skolan/C#/Tamagotchi/Game/obj/Debug/net10.0/Game.dll
+/Users/vova/Documents/Skolan/C#/Tamagotchi/Game/obj/Debug/net10.0/refint/Game.dll
+/Users/vova/Documents/Skolan/C#/Tamagotchi/Game/obj/Debug/net10.0/Game.pdb
+/Users/vova/Documents/Skolan/C#/Tamagotchi/Game/obj/Debug/net10.0/Game.genruntimeconfig.cache
+/Users/vova/Documents/Skolan/C#/Tamagotchi/Game/obj/Debug/net10.0/ref/Game.dll
