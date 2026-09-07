@@ -1,3 +1,4 @@
+using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Threading.Channels;
@@ -9,6 +10,18 @@ public class Tamagotchi
     private List<String> words = new List<string>();
     private bool isAlive;
     public string Name;
+    public void Main()
+    {
+        Hi();
+        PrintStats();
+
+        while (GetAlive())
+        {
+            Choice();
+            PrintStats();
+        }
+        CauseOfDeath();
+    }
 
     public void Feed()
     {
