@@ -37,19 +37,23 @@ public class Tamagotchi
             print("Name your Tamagotchi: ");
             string temp = Console.ReadLine();
 
-            if (temp.Length < 2)
+            if (temp != null && temp.Length < 2)
             {
                 print("Name must be at least 3 characters long, try again");
                 continue;
             }
-            else
+            else if (temp != null)
             {
                 print($"Confirm that your Tamagotchi name will be {temp}");
                 while (true)
                 {
                     print("Y/N");
                     string confirm = Console.ReadLine().ToLower();
-                    if (confirm == "y")
+                    if (confirm == null)
+                    {
+                        print("The field was empty, try again!");
+                    }
+                    else if (confirm == "y")
                     {
                         Name = temp;
                         break;
@@ -60,6 +64,7 @@ public class Tamagotchi
                 if (Name != null) break;
                 else continue;
             }
+            else print("The name is null");
         }
         print($"Everyone, welcome our new Tamagotchi - {Name}");
         boredom = 0;
