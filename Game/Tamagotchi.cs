@@ -1,8 +1,3 @@
-using System.Reflection;
-using System.Runtime.CompilerServices;
-using System.Runtime.InteropServices;
-using System.Threading.Channels;
-
 public class Tamagotchi
 {
     private int hunger;
@@ -102,9 +97,9 @@ public class Tamagotchi
         isAlive = GetAlive();
         print("Stats: ");
         print($"Name: {Name}");
-        print($"Alive: {isAlive}");
-        print($"Hunger: {hunger}");
-        print($"Boredom: {boredom}");
+        print($"Alive: {(isAlive ? "❤️ Yes" : "💔 No")}");
+        print($"Hunger: {((hunger > 4) ? $"😋 {hunger}" : $"😞 {hunger}")}");
+        print($"Boredom: {((boredom < 4) ? $"😆 {boredom}" : $"🥱 {boredom}")}");
         print($"Words: {string.Join(", ", words)}");
     }
 
