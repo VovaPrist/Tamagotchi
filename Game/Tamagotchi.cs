@@ -2,6 +2,7 @@ public class Tamagotchi
 {
     private int hunger;
     private int boredom;
+    private Random random = Random.Shared;
     private List<String> words = new List<string>();
     private bool isAlive;
     public string Name;
@@ -25,7 +26,7 @@ public class Tamagotchi
     public void Feed()
     {
         hunger += 5;
-        if (hunger >= 11) hunger = 11;
+        if (hunger >= 10) hunger = 10;
     }
 
     public void Hi()
@@ -91,8 +92,10 @@ public class Tamagotchi
 
     public void Tick()
     {
-        hunger -= 1;
-        boredom += 1;
+        int hungerTick = random.Next(0, 3);
+        int boredomTick = random.Next(0, 3);
+        hunger -= hungerTick;
+        boredom += boredomTick;
 
     }
 
@@ -132,7 +135,7 @@ public class Tamagotchi
     private void ReduceBoredom(int points)
     {
         boredom -= points;
-        if (boredom <= -1) boredom = -1;
+        if (boredom <= 0) boredom = 0;
     }
 
     public void Choice()
