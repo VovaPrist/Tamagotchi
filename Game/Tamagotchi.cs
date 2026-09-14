@@ -5,6 +5,10 @@ public class Tamagotchi
     private List<String> words = new List<string>();
     private bool isAlive;
     public string Name;
+    public Tamagotchi()
+    {
+        Main();
+    }
     public void Main()
     {
         Hi();
